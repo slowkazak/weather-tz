@@ -1,0 +1,11 @@
+<form [formGroup]="addForm" (ngSubmit)="_Find()">
+
+  <input type="text" placeholder="Название города" formControlName="cityname">
+  <div>
+    <button style="float: right;" type="submit" [disabled]="!addForm.valid">
+      Найти
+    </button>
+  </div>
+</form>
+<div (click)="_AddCity()" *ngIf="searchresult.text"><h4 >{{searchresult?.text}}</h4></div>
+
