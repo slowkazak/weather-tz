@@ -4,13 +4,18 @@ declare var ymaps;
 
 @Injectable()
 export class GeocoderService {
-  private settings: any = {}
+  private settings: any = {};
 
   constructor() {
 
   }
 
-
+  /**
+   * Геокодирование города по его названию
+   * @param cityname
+   * @returns {Promise<T>}
+   * @constructor
+   */
   Geocode(cityname: string) {
     return new Promise((resolve, reject) => {
       let myGeocoder = ymaps.geocode(cityname);

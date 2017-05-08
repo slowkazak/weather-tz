@@ -10,9 +10,15 @@ export class ApiService {
   constructor(private http: Http, private settingsService: SettingsService) {
   }
 
+  /**
+   * Получение города по координатам - так проще, потому что openweathermap понимает строковые запросы только в латинице
+    * @param lan
+   * @param lat
+   * @returns {Promise<{}>}
+   * @constructor
+   */
   GetCityByCoords(lan, lat) {
     let apisettings: any = this.settingsService.Get();
-    console.log(apisettings.owmapapilatparam)
     let urlSearch = new URLSearchParams();
     urlSearch.append(apisettings.owmapapiappidparam, apisettings.owmapapikey);
     urlSearch.append(apisettings.owmapapilatparam, lan);

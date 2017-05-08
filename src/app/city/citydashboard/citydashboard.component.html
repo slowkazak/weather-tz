@@ -1,0 +1,44 @@
+<table class="mdl-data-table mdl-js-data-table" *ngIf="weather.length">
+  <thead>
+  <tr>
+    <th class="mdl-data-table__cell--non-numeric">Город</th>
+    <th class="mdl-data-table__cell--non-numeric">Время прогноза</th>
+    <th>Age</th>
+    <th class="mdl-data-table__cell--non-numeric">Температура</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let city of weather" (click)="_ShowCity(city.id)">
+    <td class="mdl-data-table__cell--non-numeric">{{city?.cityname}}</td>
+    <td class="mdl-data-table__cell--non-numeric">{{city?.dt | unixtoDate}}</td>
+    <td>40</td>
+    <td class="mdl-data-table__cell--non-numeric">{{city?.temp | KtoC}} C</td>
+  </tr>
+
+  </tbody>
+</table>
+
+
+
+
+
+
+<!--<table *ngIf="weather.length">-->
+  <!--<thead>-->
+  <!--<tr>-->
+    <!--<th>Город</th>-->
+    <!--<th>Ветер</th>-->
+    <!--<th>Температура</th>-->
+    <!--<th>Время прогноза</th>-->
+  <!--</tr>-->
+  <!--</thead>-->
+  <!--<thead>-->
+  <!--<tr *ngFor="let city of weather">-->
+    <!--<td>{{city?.cityname}}</td>-->
+    <!--<td>{{city?.windspeed}} <ng-template [ngIf]="city.windspeed">M/c</ng-template>-->
+    <!--</td>-->
+    <!--<td>{{city?.temp | KtoC}} C</td>-->
+    <!--<td>{{city?.dt | unixtoDate}}</td>-->
+  <!--</tr>-->
+  <!--</thead>-->
+<!--</table>-->

@@ -1,0 +1,14 @@
+<div class="card-wide mdl-card mdl-shadow--2dp" *ngIf="cityweather">
+  <div class="mdl-card__title">
+    <img *ngIf="cityweather.weathericon" [attr.src]="imgsettings?.owmapimgaddr+cityweather?.weathericon+imgsettings?.owmapimgext">
+    <h2 class="mdl-card__title-text"> {{cityweather?.cityname}}</h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+   <p *ngIf="cityweather.dt">Время прогноза: {{cityweather?.dt | unixtoDate}}</p>
+   <p *ngIf="cityweather.humidity">Влажность: {{cityweather?.humidity }} %</p>
+   <p *ngIf="cityweather.temp">Температура: {{cityweather?.temp | KtoC}} C</p>
+   <p *ngIf="cityweather.sunrise">Восход: {{cityweather?.sunrise | unixtoDate}}</p>
+   <p *ngIf="cityweather.sunset">Закат: {{cityweather?.sunset | unixtoDate}}</p>
+  </div>
+
+</div>

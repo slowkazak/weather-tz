@@ -5,6 +5,9 @@ import {CitydashboardComponent} from './citydashboard/citydashboard.component';
 import {CityviewComponent} from './cityview/cityview.component';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {CityRouting} from './city-routing.module';
+import {KtoCPipe} from '../pipe/k-to-c.pipe';
+
+import { UnixtoDatePipe } from '../pipe/unixto-date.pipe';
 
 @NgModule({
   imports: [
@@ -13,7 +16,11 @@ import {CityRouting} from './city-routing.module';
     CityRouting,
     ReactiveFormsModule
   ],
-  declarations: [CitydashboardComponent, CityviewComponent
+  declarations: [
+    KtoCPipe,
+    UnixtoDatePipe,
+    CitydashboardComponent,
+    CityviewComponent
   ],
   exports: [CitydashboardComponent, CityviewComponent],
   providers: []

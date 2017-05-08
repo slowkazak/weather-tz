@@ -9,10 +9,14 @@ import {CityserviceService} from "../service/cityservice.service";
   styleUrls: ['./cityadd.component.css']
 })
 export class CityaddComponent implements OnInit {
+  /**
+   * Форма поиска
+   * @type {any}
+   */
   addForm: any = null;
-  searchresult:any = {};
 
   constructor(private formBuilder: FormBuilder, private cityservice: CityserviceService, private geocoderdervice: GeocoderService) {
+// Инициализация формы поиска
     this.addForm = this.formBuilder.group({
       cityname: ['', Validators.required]
     });
@@ -21,18 +25,15 @@ export class CityaddComponent implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * Поиск координат города для и передача их в Subject для немедленного получения погоды и добавления в массив
+   * @private
+   */
   private _Find() {
-    this.geocoderdervice.Geocode(this.addForm.value.cityname).then(res => {
-      console.log(res)
-       this.searchresult = res;
+    this.geocoderdervice.Geocode(this.addForm.value.cityname).then((res: any) => {
+        this.cityservice.cityadd.next({coords: res.boundedBy[0], name: res.text});
       }
-    )
-    ;
+    );
 
   }
-  private _AddCity(){
-    this.cityservice.cityadd.next(this.searchresult.boundedBy[0]);
-
-  }
-
 }

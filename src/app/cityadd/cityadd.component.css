@@ -1,0 +1,11 @@
+form {
+  display: flex;
+  align-items: center; }
+  form .mdl-textfield__label {
+    color: #0f1740 !important; }
+  form .mdl-button {
+    color: #0f1740; }
+  form .search {
+    color: #fff !important; }
+
+/*# sourceMappingURL=cityadd.component.css.map */

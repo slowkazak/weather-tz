@@ -1,14 +1,14 @@
 # WeatherTz
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.2.
+Небольшое приложение для получения срогноза погоды из openweathermap api 
+Для начала выполните npm i из клнированного кода, замем, ng-serve
+В поисковой строке введите название города и нажмите либо значек с лупой, либо Enter,
+При клике на строке таблицы будет показана более полная информация по городу
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
 
 ## Build
 

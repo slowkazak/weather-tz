@@ -1,3 +1,6 @@
+/**
+ * Корневые настройки роутера (lazy-loading)
+ */
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {CitydashboardComponent} from '../city/citydashboard/citydashboard.component';
@@ -17,4 +20,3 @@ const appRoutes: Routes = [
 })
 export class AppRoutingModule {
 }
-//{path: '**', component: CitydashboardComponent},

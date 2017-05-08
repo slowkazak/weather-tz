@@ -1,11 +1,13 @@
 <form [formGroup]="addForm" (ngSubmit)="_Find()">
-
-  <input type="text" placeholder="Название города" formControlName="cityname">
+  <div class="mdl-textfield mdl-js-textfield">
+    <input class="mdl-textfield__input" autocomplete="off"  type="text" id="city" formControlName="cityname">
+    <label class="mdl-textfield__label" for="city">Название города</label>
+  </div>
   <div>
-    <button style="float: right;" type="submit" [disabled]="!addForm.valid">
-      Найти
+    <button class="mdl-button" [disabled]="!addForm.valid" [ngClass]="{'search': addForm.valid}">
+      <i class="material-icons">search</i>
     </button>
   </div>
 </form>
-<div (click)="_AddCity()" *ngIf="searchresult.text"><h4 >{{searchresult?.text}}</h4></div>
+
 
