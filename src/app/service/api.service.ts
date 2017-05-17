@@ -3,7 +3,7 @@ import {Http, URLSearchParams} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 import {Callback} from "../class/callback.static";
 import {SettingsService} from "./settings.service";
-import {promise} from "selenium-webdriver";
+
 @Injectable()
 export class ApiService {
 

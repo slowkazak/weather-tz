@@ -12,8 +12,19 @@
 
   <main class="mdl-layout__content">
     <div class="page-content">
-      <router-outlet></router-outlet></div>
+      <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--12-col">
+<app-tablelist (gettablename)="_GetTablename($event)"></app-tablelist>
+
+
+      </div>
+      </div>
+      <div class="mdl-grid">
+      <div class="mdl-cell mdl-cell--4-col">6</div>
+      <div class="mdl-cell mdl-cell--4-col">6</div>
+      </div>
+
+      <router-outlet></router-outlet>
+    </div>
   </main>
 </div>
-
-

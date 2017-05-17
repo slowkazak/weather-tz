@@ -11,12 +11,14 @@ import {CityaddComponent} from './cityadd/cityadd.component';
 import {AppRoutingModule} from './app-router/app.routing.module';
 import {CityserviceService} from './service/cityservice.service';
 import {ApiService} from './service/api.service';
+import { TablelistComponent } from './tablelist/tablelist.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CityaddComponent,
+    TablelistComponent,
 
   ],
   imports: [
